@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sign In & Sign Up Page</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#f4f4f4;
+}
+
+/* Header */
+header{
+background:linear-gradient(#145a32,#2e8b57);
+height:180px;
+position:relative;
+}
+
+.logo{
+width:90px;
+margin:20px;
+}
+
+/* Navigation */
+nav{
+background:#888;
+position:absolute;
+bottom:0;
+left:0;
+width:100%;
+}
+
+nav ul{
+list-style:none;
+display:flex;
+justify-content:center;
+}
+
+nav ul li{
+position:relative;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+display:block;
+padding:15px 50px;
+}
+
+nav ul li:hover{
+background:#1f7a1f;
+}
+
+/* Dropdown */
+.dropdown{
+display:none;
+position:absolute;
+top:100%;
+left:0;
+background:#2c9c2c;
+width:180px;
+z-index:10;
+}
+
+.dropdown li{
+width:100%;
+}
+
+.dropdown li a{
+padding:15px;
+color:white;
+}
+
+nav ul li:hover .dropdown{
+display:block;
+}
+
+.dropdown li:hover{
+background:green;
+}
+
+/* Form Section */
+.container{
+background:url("earth.jpg");
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:50px;
+padding:80px;
+}
+
+/* Sustainable Living Blog Heading */
+.blog-title{
+width:100%;
+text-align:center;
+color:white;
+margin-bottom:10px;
+text-shadow:0 2px 5px rgba(0,0,0,.5);
+}
+
+.blog-title h1{
+font-size:42px;
+margin-bottom:10px;
+}
+
+.blog-title p{
+font-size:18px;
+}
+
+/* Form Boxes */
+.box{
+background:white;
+width:320px;
+padding:30px;
+border-radius:15px;
+box-shadow:0 0 15px rgba(0,0,0,.3);
+}
+
+.box h2{
+text-align:center;
+margin-bottom:20px;
+}
+
+label{
+font-weight:bold;
+}
+
+input[type=text],
+input[type=email],
+input[type=password]{
+width:100%;
+padding:12px;
+margin-top:8px;
+margin-bottom:18px;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=password]:focus{
+outline:none;
+border-color:#2e8b57;
+}
+
+input[type=submit]{
+width:100%;
+padding:12px;
+border:none;
+background:#2e8b57;
+color:white;
+font-size:16px;
+border-radius:5px;
+cursor:pointer;
+}
+
+input[type=submit]:hover{
+background:#145a32;
+}
+
+/* Footer */
+footer{
+background:#d5f5d5;
+text-align:center;
+padding:20px;
+font-size:18px;
+}
+
+/* Responsive */
+@media (max-width:600px){
+
+header{
+height:220px;
+}
+
+nav ul{
+flex-direction:column;
+}
+
+.dropdown{
+position:static;
+width:100%;
+}
+
+.container{
+padding:40px 15px;
+}
+
+.box{
+width:100%;
+}
+
+.blog-title h1{
+font-size:32px;
+}
+
+.blog-title p{
+font-size:16px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Header -->
+<header>
+
+<img src="https://cdn-icons-png.flaticon.com/512/415/415733.png" class="logo">
+
+<nav>
+
+<ul>
+
+<li>
+<a href="#">Home</a>
+
+<ul class="dropdown">
+<li><a href="#">Item 1</a></li>
+<li><a href="#">Item 2</a></li>
+<li><a href="#">Item 3</a></li>
+<li><a href="#">Item 4</a></li>
+</ul>
+
+</li>
+
+<li><a href="#">About</a></li>
+
+<li><a href="#">Model</a></li>
+
+<li><a href="#">Others</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+
+<!-- Forms -->
+<section class="container">
+
+<!-- Sustainable Living Blog Heading -->
+<div class="blog-title">
+
+<h1>Sustainable Living</h1>
+
+<p>
+Small choices. Big impact. Let's build a greener future together.
+</p>
+
+</div>
+
+
+<!-- Sign In -->
+<div class="box">
+
+<h2>Sign In</h2>
+
+<form>
+
+<label>Username</label>
+
+<input type="text" placeholder="Enter Username">
+
+<label>Password</label>
+
+<input type="password" placeholder="Enter Password">
+
+<input type="submit" value="Sign In">
+
+</form>
+
+</div>
+
+
+<!-- Sign Up -->
+<div class="box">
+
+<h2>Sign Up</h2>
+
+<form>
+
+<label>Name</label>
+
+<input type="text" placeholder="Enter Name">
+
+<label>Email</label>
+
+<input type="email" placeholder="Enter Email">
+
+<label>Password</label>
+
+<input type="password" placeholder="Enter Password">
+
+<input type="submit" value="Sign Up">
+
+</form>
+
+</div>
+
+</section>
+
+
+<!-- Footer -->
+<footer>
+
+<p>Your Address</p>
+
+<p>
+&copy; 2026-2027. (URK24CS1095) - Web Technology Lab Batch 2.
+All Rights Reserved.
+</p>
+
+</footer>
+
+</body>
+</html>
